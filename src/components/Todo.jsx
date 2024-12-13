@@ -4,11 +4,12 @@ import { FaCalendarAlt } from "react-icons/fa";
 import TodoItems from "./TodoItems";
 
 const Todo = () => {
-  const [todoList, setTodoList] = useState([
-    localStorage.getItem("todos")
-      ? JSON.parse(localStorage.getItem("todos"))
-      : [],
-  ]);
+  
+  const [todoList, setTodoList] = useState(() => {
+    const storedTodos = localStorage.getItem('todos');
+    return storedTodos ? JSON.parse(storedTodos) : [];
+  });
+  
 
   const inputRef = useRef();
 
