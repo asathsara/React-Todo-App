@@ -1,13 +1,15 @@
 import React from 'react'
-import { FaRegSquare } from "react-icons/fa6";
-import { FaRegSquareCheck } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa";
 
 
-const TodoItems = () => {
+const TodoItems = ({text,id,isComplete,deleteTodo,toggle}) => {
   return (
-      <div className='flex items-center my-3 gap-2'>
-          <FaRegSquare/>
+    <div onClick={()=>toggle(id)} className='flex my-3 gap-2 items-stretch cursor-pointer'>
+      
+      <input checked={isComplete} type='checkbox'></input>
+      <p className={`font-poppins text-lg font-semibold ml-2 ${isComplete ? 'line-through' : ''}`}>{text}</p>
+
+      <FaTrash onClick={()=> deleteTodo(id)} className='cursor-pointer ml-auto'/>
 
     </div>
   )
