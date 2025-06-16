@@ -2,9 +2,9 @@ import Todo from './components/Todo'
 
 const App = () => {
   return (
-    <div  className='bg-gray-800 h-screen grid py-4'>
-      <Todo/>
-  </div>
+    <div className="bg-gray-800 min-h-screen py-4 flex justify-center items-center">
+      <Todo />
+    </div>
   )
 }
 
