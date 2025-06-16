@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import TodoItems from "./TodoItems";
@@ -51,6 +51,7 @@ const Todo = () => {
         <h1 className="font-poppins text-2xl font-bold text-gray-700">
           Todo App
         </h1>
+        
       </div>
 
       <div className="bg-gray-100 rounded-full min-h-[50px] flex items-center my-8">
